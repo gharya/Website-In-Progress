@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+/* Different positions determine how that particular element is seen through interaction. Static, relative, fixed, absolute, sticky are the 5 different positions in CSS */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(146, 147, 150, 0.7),rgba(146, 147, 150, 0.7)),url(imgaes/pigment.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+/* LOGO SIZE  */
+nav img{
+    width: 200px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+/* ORGANIZES BUTTONS IN TOP RIGHT OF HOME PAGE */
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+/* COLOR/FONT OF THE BUTTONS ON THE HOMEPAGE */
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+/* ADDS LINES UNDER BUTTONS. ::AFTER CAUSES THE LINES TO GO UNDERNEATH THE WORDS */
+/* Transition was added after hover lines and dictates how long it takes for the line to appear while your mouse is over the option. Width changed to 0% to hide them unless you hover */
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fcfcfc;
+    display: block;
+    margin: auto;
+    transition: .3s;
+}
+/* :hover::after causes the line underneath to only appear while your cursor is over one of the options */
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+/* Changes the position of the introductin text box that was created with text-align putting it in the middle of the screen */
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/* Changes font of the header on the main text box created */
+.text-box h1{
+    font-size: 62px;
+    color: #000000;
+}
+/* Changes font,color, and margin size of the paragraph on the text box created. 10px (top), 0 (left/right), 40px bottom. */
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 22px;
+    color: #000000;
+}
+/* Changes the position and look of the contact us button that is created. */
+/* .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+}
+/* Causes the button to rect to cursor hovering over the button. */
+/*.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: .5s;
+}
+
+/* Stops buttons meant for smaller screen to appear on larger screen devices */
+nav .fa{
+    display: none;
+}
+
+
+
+/* Customization for mobile devices */
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    /* Gives space between menu options on smaller screen devices */
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/* Coatings and Adhesives */
+.sub-header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(imgaes/PAINTS.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    font-size: 35px;
+    margin-top: 50px;
+    text-decoration: underline;
+}
+
+.contact-us{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+.contact-us h3{
+    text-align: left;
+}
+.contact-method input, .contact-method textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0
+}
+.contact-method button{
+    margin: 10px 0px;
+}

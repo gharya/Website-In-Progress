@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-
+    scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="imgaes/Logologo.png"></a>
+        <div class="nav-links">
+            <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+            <ul>
+                <!--THESE ARE ALL OF THE BUTTONS IN THE TOP RIGHT OF HOME PAGE-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coatings and adhesives.html">Coatings & Adhesives</a></li>
+                <li><a href="Printing and packaging.html">Printing & Packaging</a></li>
+                <li><a href="3D Printing.html">3D Printing</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Contact Us</h1>
+<!--Contact Us-->
+
+<section class = "Contact Us">
+<div class ="contact-us">
+    <h3>Contact us</h3>
+    <form action ="inquiries.php" method="post">
+        <input type="text" name="name" placeholder="Enter Name" required>
+        <input type = "email" name="email" placeholder="Enter Email" required>
+        <textarea rows="1" name="message" placeholder="Your inquiries" required>
+        </textarea>
+        <button type ="submit" class = "hero-btn">Submit
+        </button>
+    </form>
+</div>
+
+<!---Java for the menu-->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+
+</script>
+</body>
+</html>

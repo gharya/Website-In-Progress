@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-
+    scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="imgaes/Logologo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+            <ul>
+                <!--THESE ARE ALL OF THE BUTTONS IN THE TOP RIGHT OF HOME PAGE-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coatings and adhesives.html">Coatings & Adhesives</a></li>
+                <li><a href="Printing and packaging.html">Printing & Packaging</a></li>
+                <li><a href="3D Printing.html">3D Printing</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+<!-- <br> is the line break to get the rest of the text to go onto a second line beneath the first -->
+<div class = "text-box">
+    <h1>American Trade International</h1>
+    <p>Industry solutions</p>
+</div>
+    
+    
+
+</section>
+
+
+<!---Java for the menu-->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+
+</script>
+
+</body>
+</html>
